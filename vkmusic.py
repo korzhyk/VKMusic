@@ -125,12 +125,13 @@ if __name__ == '__main__':
         # Request list of audios
         audios = get_audios(connection)
         if len(audios) > 0:
-            print("Found %s audio%s:" % (len(audios), 's' if len(audios) > 1 else ''))
+            print("Found %s audio%s:\n" % (len(audios), 's' if len(audios) > 1 else ''))
             print('%3s. %-80s %s' % ('No', 'Title', 'Duration'))
             ix = 0
             for audio in audios:
                 ix += 1
                 print('%3d. %-80s %s' % (ix, get_title(audio), datetime.timedelta(seconds=audio['duration'])))
+            print("\r")
 
             # Sleep to prevent max request count
             time.sleep(1)
@@ -153,7 +154,7 @@ if __name__ == '__main__':
                 download(audio, output)
                 processed += 1
         else:
-            print("No audios found! Exiting...")
+            print("\nNo audios found! Exiting...")
             sys.exit(0)
 
     except Exception as e:
@@ -165,4 +166,4 @@ if __name__ == '__main__':
         sys.exit(0)
 
     finally:
-        print("Done in %s" % (datetime.datetime.now() - start_time))
+        print("\nDone in %s" % (datetime.datetime.now() - start_time))
