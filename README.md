@@ -13,6 +13,8 @@ Home page [VKMusic](http://korzhyk.github.com/VKMusic)
 
     $ easy_install VKMusic
 
+or
+
     $ pip install VKMusic
 
 ## Usage
