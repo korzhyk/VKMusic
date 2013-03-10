@@ -104,7 +104,7 @@ def get_title(audio):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='', version='%(prog)s ' + __version__)
     parser.add_argument('-o', '--output', help='output path to store photos',
-                        default=os.path.abspath(os.path.join(os.path.dirname(__file__), '~/Music')))
+                        default=os.path.abspath(os.path.join(os.path.dirname(__file__), 'Music')))
     parser.add_argument('username', help='vk.com username')
     parser.add_argument('-p','--password', help='vk.com password')
     parser.add_argument('-s','--sort', help='sort by artist folder', action='store_true')
