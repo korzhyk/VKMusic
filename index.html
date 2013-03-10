@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Vkmusic by korzhyk</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Vkmusic</h1>
+        <p>Extremely small tool to export audios from vk.com.</p>
+
+        <p class="view"><a href="https://github.com/korzhyk/VKMusic">View the Project on GitHub <small>korzhyk/VKMusic</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/korzhyk/VKMusic/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/korzhyk/VKMusic/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/korzhyk/VKMusic">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>VKMusic</h1>
+
+<p>Inspired by and main code from <a href="https://github.com/amka/VKPorter">VKPorter</a></p>
+
+<p>Edid for audio download by me <a href="https://github.com/korzhyk">korzhyk</a>.</p>
+
+<p>Extremely small tool to export audios from <a href="https://vk.com">vk.com</a>.</p>
+
+<h2>Prerequisites</h2>
+
+<p>Before you can start using VKMusic you have to install some python libraries if you don't have it.</p>
+
+<h3>Requests</h3>
+
+<p><a href="https://github.com/kennethreitz/requests">https://github.com/kennethreitz/requests</a></p>
+
+<pre><code>$ pip install requests
+</code></pre>
+
+<p>or, with <a href="http://pypi.python.org/pypi/setuptools">easy_install</a>:</p>
+
+<pre><code>$ easy_install requests
+</code></pre>
+
+<h3>VK_API</h3>
+
+<p><a href="https://github.com/python273/vk_api">https://github.com/python273/vk_api</a></p>
+
+<pre><code>$ pip install vk_api
+</code></pre>
+
+<h2>Usage</h2>
+
+<p>Synopsis:</p>
+
+<pre><code>$ vkmusic.py [-h] [-v] [-o OUTPUT] [-p PASSWORD] username
+</code></pre>
+
+<p>See also <code>vkmusic --help</code>.</p>
+
+<h3>Examples</h3>
+
+<pre><code>$ vkmusic.py -p RawPa$$word username
+</code></pre>
+
+<p>all audios will be exported to <code>./Music</code>.</p>
+
+<pre><code>$ vkmusic.py -o ~/Music username
+</code></pre>
+
+<p>audios will be exported to <code>~/Music</code>.</p>
+
+<pre><code>$ vkmusic.py -s username
+</code></pre>
+
+<p>audios will be exported to artist name folders ex. <code>Adele - Let The Sky Fall (OST James Bond: Skyfall)</code> will be saved to <code>./Music/Adele/Let The Sky Fall (OST James Bond: Skyfall)</code></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/korzhyk">korzhyk</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
