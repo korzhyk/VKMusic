@@ -9,11 +9,7 @@ Extremely small tool to export audios from [vk.com](https://vk.com).
 
 Home page [VKMusic](http://korzhyk.github.com/VKMusic)
 
-## Prerequisites
-
-Before you can start using VKMusic you have to install some python libraries if you don't have it.
-
-### Installation
+## Installation
 
     $ easy_install VKMusic
 
