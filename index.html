@@ -28,7 +28,7 @@
         </ul>
       </header>
       <section>
-        <h1>VKMusic</h1>
+<h1>VKMusic</h1>
 
 <p>Inspired by and main code from <a href="https://github.com/amka/VKPorter">VKPorter</a></p>
 
@@ -36,58 +36,44 @@
 
 <p>Extremely small tool to export audios from <a href="https://vk.com">vk.com</a>.</p>
 
-<h2>Prerequisites</h2>
+<p>Home page <a href="http://korzhyk.github.com/VKMusic">VKMusic</a></p>
 
-<p>Before you can start using VKMusic you have to install some python libraries if you don't have it.</p>
+<h2>Installation</h2>
 
-<h3>Requests</h3>
+<pre><code>$ easy_install VKMusic
 
-<p><a href="https://github.com/kennethreitz/requests">https://github.com/kennethreitz/requests</a></p>
-
-<pre><code>$ pip install requests
-</code></pre>
-
-<p>or, with <a href="http://pypi.python.org/pypi/setuptools">easy_install</a>:</p>
-
-<pre><code>$ easy_install requests
-</code></pre>
-
-<h3>VK_API</h3>
-
-<p><a href="https://github.com/python273/vk_api">https://github.com/python273/vk_api</a></p>
-
-<pre><code>$ pip install vk_api
+$ pip install VKMusic
 </code></pre>
 
 <h2>Usage</h2>
 
 <p>Synopsis:</p>
 
-<pre><code>$ vkmusic.py [-h] [-v] [-o OUTPUT] [-p PASSWORD] username
+<pre><code>$ vkmusic [-h] [-v] [-o OUTPUT] [-p PASSWORD] username
 </code></pre>
 
 <p>See also <code>vkmusic --help</code>.</p>
 
 <h3>Examples</h3>
 
-<pre><code>$ vkmusic.py -p RawPa$$word username
+<pre><code>$ vkmusic -p RawPa$$word username
 </code></pre>
 
 <p>all audios will be exported to <code>./Music</code>.</p>
 
-<pre><code>$ vkmusic.py -o ~/Music username
+<pre><code>$ vkmusic -o ~/Music username
 </code></pre>
 
 <p>audios will be exported to <code>~/Music</code>.</p>
 
-<pre><code>$ vkmusic.py -s username
+<pre><code>$ vkmusic -s username
 </code></pre>
 
 <p>audios will be exported to artist name folders ex. <code>Adele - Let The Sky Fall.mp3</code> will be saved to <code>./Music/Adele/Let The Sky Fall.mp3</code></p>
 
 <h3>Screenshot</h3>
 
-<p><a href="http://korzhyk.github.com/VKMusic/images/terminal.png" target="_blank"><img src="http://korzhyk.github.com/VKMusic/images/terminal.png" alt="VKMusic"></a></p>
+<p><a href="http://korzhyk.github.com/VKMusic/images/terminal.png"><img src="https://a248.e.akamai.net/camo.github.com/e5ed2bd6a339cdc244359862c145f9476011f020/687474703a2f2f6b6f727a68796b2e6769746875622e636f6d2f564b4d757369632f696d616765732f7465726d696e616c2e706e67" alt="VKMusic" style="max-width:100%;"></a></p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/korzhyk">korzhyk</a></p>
