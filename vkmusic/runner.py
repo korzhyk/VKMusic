@@ -15,7 +15,7 @@
 
 __author__ = 'Andrii Korzh <Andrii.Korzh@gmail.com>'
 __date__ = '10.03.13'
-__version__ = '0.0.1'
+__version__ = '0.0.3'
 
 import argparse
 import datetime
@@ -23,19 +23,8 @@ from getpass import getpass
 import os
 import time
 import sys
-
-try:
-    import requests
-except ImportError:
-    print("Cannot find 'requests' module. Please install it and try again.")
-    sys.exit(0)
-
-try:
-    from vk_api import VkApi
-except ImportError:
-    print("Cannot find 'vk_api' module. Please install it and try again.")
-    sys.exit(0)
-
+import requests
+from vk_api import VkApi
 
 def connect(login, password):
     """Initialize connection with `vk.com <https://vk.com>`_ and try to authorize user with given credentials.
@@ -83,7 +72,7 @@ def get_audios(connection):
         return None
 
 
-def download(audio, output):
+def download(audio, output, title):
     """Download audio
 
     :param audio: hash
@@ -92,7 +81,6 @@ def download(audio, output):
     if not os.path.exists(output):
         os.makedirs(output)
     r = requests.get(audio['url'])
-    title = audio['title'] if args.sort else get_title(audio)
     with open(os.path.join(output, '%s.mp3' % title), 'wb') as f:
         for buf in r.iter_content(1024):
             if buf:
@@ -101,10 +89,10 @@ def download(audio, output):
 def get_title(audio):
     return "%s - %s" % (audio['artist'], audio['title'])
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser(description='', version='%(prog)s ' + __version__)
     parser.add_argument('-o', '--output', help='output path to store photos',
-                        default=os.path.abspath(os.path.join(os.path.dirname(__file__), 'Music')))
+                        default='~/Music')
     parser.add_argument('username', help='vk.com username')
     parser.add_argument('-p','--password', help='vk.com password')
     parser.add_argument('-s','--sort', help='sort by artist folder', action='store_true')
@@ -151,7 +139,7 @@ if __name__ == '__main__':
 
                 output = os.path.join(args.output, audio['artist'] if args.sort else '')
 
-                download(audio, output)
+                download(audio, output, audio['title'] if args.sort else get_title(audio))
                 processed += 1
         else:
             print("\nNo audios found! Exiting...")
@@ -167,3 +155,6 @@ if __name__ == '__main__':
 
     finally:
         print("\nDone in %s" % (datetime.datetime.now() - start_time))
+
+if __name__ == '__main__':
+    main()
