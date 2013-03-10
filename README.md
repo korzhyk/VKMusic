@@ -50,4 +50,4 @@ audios will be exported to `~/Music`.
 audios will be exported to artist name folders ex. `Adele - Let The Sky Fall.mp3` will be saved to `./Music/Adele/Let The Sky Fall.mp3`
 
 ### Screenshot
-![VKMusic](terminal.png)
+![VKMusic](http://korzhyk.github.com/VKMusic/images/terminal.png)
