@@ -3,7 +3,7 @@ VKMusic
 
 Inspired by and main code from [VKPorter](https://github.com/amka/VKPorter)
 
-Edid for audio download by me [korzhyk](https://github.com/korzhyk).
+Edit for audio download by me [korzhyk](https://github.com/korzhyk).
 
 Extremely small tool to export audios from [vk.com](https://vk.com).
 
