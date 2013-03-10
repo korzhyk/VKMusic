@@ -7,6 +7,8 @@ Edit for audio download by me [korzhyk](https://github.com/korzhyk).
 
 Extremely small tool to export audios from [vk.com](https://vk.com).
 
+Home page
+
 
 ## Prerequisites
 
@@ -50,4 +52,4 @@ audios will be exported to `~/Music`.
 audios will be exported to artist name folders ex. `Adele - Let The Sky Fall.mp3` will be saved to `./Music/Adele/Let The Sky Fall.mp3`
 
 ### Screenshot
-![VKMusic](http://korzhyk.github.com/VKMusic/images/terminal.png)
+[![VKMusic](http://korzhyk.github.com/VKMusic/images/terminal.png)](http://korzhyk.github.com/VKMusic/images/terminal.png)
