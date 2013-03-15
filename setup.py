@@ -17,14 +17,13 @@ def read(fname):
 
 setup(
   name="VKMusic",
-  version="0.0.4",
+  version="0.0.5",
   packages=['vkmusic'],
   install_requires=['requests', 'vk_api'],
   include_package_data=True,
   author="Andrii Korzh",
   author_email="Andrii.Korzh@gmail.com",
   description="Extremely small tool to export audios from vk.com",
-  long_description=read('README.md'),
   license='BSD',
   keywords="vk music",
   url="http://korzhyk.github.com/VKMusic/",   # project home page, if any

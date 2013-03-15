@@ -11,6 +11,11 @@ Home page [VKMusic](http://korzhyk.github.com/VKMusic)
 
 ## Installation
 
+###VK-Api
+
+Install vk-api from this repo [vk_api](https://github.com/python273/vk_api).
+And then:
+
     $ easy_install VKMusic
 
 or
