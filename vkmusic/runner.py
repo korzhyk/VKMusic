@@ -13,9 +13,7 @@
     :license: BSD, see LICENSE for more details.
 """
 
-__author__ = 'Andrii Korzh <Andrii.Korzh@gmail.com>'
-__date__ = '10.03.13'
-__version__ = '0.0.3'
+__version__ = '0.0.4'
 
 import argparse
 import datetime
@@ -112,7 +110,7 @@ def main():
 
         # Request list of audios
         audios = get_audios(connection)
-        if len(audios) > 0:
+        if len(audios):
             print("Found %s audio%s:\n" % (len(audios), 's' if len(audios) > 1 else ''))
             print('%3s. %-80s %s' % ('No', 'Title', 'Duration'))
             ix = 0
@@ -120,9 +118,6 @@ def main():
                 ix += 1
                 print('%3d. %-80s %s' % (ix, get_title(audio), datetime.timedelta(seconds=audio['duration'])))
             print("\r")
-
-            # Sleep to prevent max request count
-            time.sleep(1)
 
             processed = 1
 
@@ -133,14 +128,24 @@ def main():
                 # Pad with spaces to clear the previous line's tail.
                 # It's ok to multiply by negative here.
                 output_s += ' '*(prev_s_len - len(output_s))
+                
                 sys.stdout.write(output_s)
                 prev_s_len = len(output_s)
                 sys.stdout.flush()
 
                 output = os.path.join(args.output, audio['artist'] if args.sort else '')
+                title = audio['title'] if args.sort else get_title(audio)
 
-                download(audio, output, audio['title'] if args.sort else get_title(audio))
+                try:
+                    download(audio, output, title)
+                except Exception as e:
+                    time.sleep(1)
+                
                 processed += 1
+
+                if processed%50==0:
+                    time.sleep(5)
+
         else:
             print("\nNo audios found! Exiting...")
             sys.exit(0)
