@@ -109,7 +109,13 @@ def main():
         connection = connect(args.username, password)
 
         # Request list of audios
-        audios = get_audios(connection)
+        audios_response = get_audios(connection)
+        audios_count = audios_response['count']
+        audios = audios_response['items']
+ 
+        print("Found %s album%s:" % (audios_count, 's' if audios_count > 1 else ''))
+        ix = 0
+
         if len(audios):
             print("Found %s audio%s:\n" % (len(audios), 's' if len(audios) > 1 else ''))
             print('%3s. %-80s %s' % ('No', 'Title', 'Duration'))
