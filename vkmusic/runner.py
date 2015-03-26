@@ -15,7 +15,7 @@
 
 __author__ = 'Andrii Korzh <Andrii.Korzh@gmail.com>'
 __date__ = '03.26.15'
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 
 import argparse
 import datetime
@@ -81,9 +81,12 @@ def download(audio, output, title):
     if not os.path.exists(output):
         os.makedirs(output)
     r = requests.get(audio['url'])
-    if os.path.isfile('%s.mp3' % title)
+
+    filename = '%s.mp3' % title
+    if os.path.isfile(filename):
         return None
-    with open(os.path.join(output, '%s.mp3' % title), 'wb') as f:
+
+    with open(os.path.join(output, filename), 'wb') as f:
         for buf in r.iter_content(1024):
             if buf:
                 f.write(buf)
