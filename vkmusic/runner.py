@@ -117,7 +117,7 @@ def main():
         ix = 0
 
         if len(audios):
-            print("Found %s audio%s:\n" % (len(audios), 's' if len(audios) > 1 else ''))
+            print("Found %s audio%s:\n" % (audios_count, 's' if audios_count > 1 else ''))
             print('%3s. %-80s %s' % ('No', 'Title', 'Duration'))
             ix = 0
             for audio in audios:
@@ -129,8 +129,8 @@ def main():
 
             prev_s_len = 0  # A length of the previous output line.
             for audio in audios:
-                percent = round(float(processed) / float(len(audios)) * 100, 2)
-                output_s = "\rExporting %-75s %s of %s (%d%%)" % (get_title(audio), processed, len(audios), percent)
+                percent = round(float(processed) / float(audios_count) * 100, 2)
+                output_s = "\rExporting %-75s %s of %s (%d%%)" % (get_title(audio), processed, audios_count, percent)
                 # Pad with spaces to clear the previous line's tail.
                 # It's ok to multiply by negative here.
                 output_s += ' '*(prev_s_len - len(output_s))
