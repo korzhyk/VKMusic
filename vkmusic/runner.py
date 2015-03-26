@@ -13,7 +13,9 @@
     :license: BSD, see LICENSE for more details.
 """
 
-__version__ = '0.0.5'
+__author__ = 'Andrii Korzh <Andrii.Korzh@gmail.com>'
+__date__ = '03.26.15'
+__version__ = '0.1.1'
 
 import argparse
 import datetime
