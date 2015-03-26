@@ -17,7 +17,7 @@ def read(fname):
 
 setup(
   name="VKMusic",
-  version="0.1.1",
+  version="0.1.2",
   packages=['vkmusic'],
   install_requires=['requests', 'vk_api'],
   include_package_data=True,
