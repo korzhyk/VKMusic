@@ -37,29 +37,9 @@
 <p>Extremely small tool to export audios from <a href="https://vk.com">vk.com</a>.</p>
 
 <h2>
-<a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites</h2>
+<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing</h2>
 
-<p>Before you can start using VKMusic you have to install some python libraries if you don't have it.</p>
-
-<h3>
-<a id="requests" class="anchor" href="#requests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requests</h3>
-
-<p><a href="https://github.com/kennethreitz/requests">https://github.com/kennethreitz/requests</a></p>
-
-<pre><code>$ pip install requests
-</code></pre>
-
-<p>or, with <a href="http://pypi.python.org/pypi/setuptools">easy_install</a>:</p>
-
-<pre><code>$ easy_install requests
-</code></pre>
-
-<h3>
-<a id="vk_api" class="anchor" href="#vk_api" aria-hidden="true"><span class="octicon octicon-link"></span></a>VK_API</h3>
-
-<p><a href="https://github.com/python273/vk_api">https://github.com/python273/vk_api</a></p>
-
-<pre><code>$ pip install vk_api
+<pre><code>$ pip install vkmusic
 </code></pre>
 
 <h2>
@@ -67,7 +47,7 @@
 
 <p>Synopsis:</p>
 
-<pre><code>$ vkmusic.py [-h] [-v] [-o OUTPUT] [-p PASSWORD] username
+<pre><code>$ vkmusic [-h] [-v] [-o OUTPUT] [-p PASSWORD] username
 </code></pre>
 
 <p>See also <code>vkmusic --help</code>.</p>
@@ -75,17 +55,17 @@
 <h3>
 <a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h3>
 
-<pre><code>$ vkmusic.py -p RawPa$$word username
+<pre><code>$ vkmusic -p RawPa$$word username
 </code></pre>
 
 <p>all audios will be exported to <code>./Music</code>.</p>
 
-<pre><code>$ vkmusic.py -o ~/Music username
+<pre><code>$ vkmusic -o ~/Music username
 </code></pre>
 
 <p>audios will be exported to <code>~/Music</code>.</p>
 
-<pre><code>$ vkmusic.py -s username
+<pre><code>$ vkmusic -s username
 </code></pre>
 
 <p>audios will be exported to artist name folders ex. <code>Adele - Let The Sky Fall.mp3</code> will be saved to <code>./Music/Adele/Let The Sky Fall.mp3</code></p>
