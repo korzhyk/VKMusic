@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>VKMusic by korzhyk</title>
+    <title>Vkmusic by korzhyk</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -15,12 +17,9 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>VKMusic</h1>
+        <h1>Vkmusic</h1>
         <p>Extremely small tool to export audios from vk.com.</p>
-
         <p class="view"><a href="https://github.com/korzhyk/VKMusic">View the Project on GitHub <small>korzhyk/VKMusic</small></a></p>
-
-
         <ul>
           <li><a href="https://github.com/korzhyk/VKMusic/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/korzhyk/VKMusic/tarball/master">Download <strong>TAR Ball</strong></a></li>
@@ -28,62 +27,80 @@
         </ul>
       </header>
       <section>
-<h1>VKMusic</h1>
+        <h1>
+<a id="vkmusic" class="anchor" href="#vkmusic" aria-hidden="true"><span class="octicon octicon-link"></span></a>VKMusic</h1>
 
 <p>Inspired by and main code from <a href="https://github.com/amka/VKPorter">VKPorter</a></p>
 
-<p>Edit for audio download by me <a href="https://github.com/korzhyk">korzhyk</a>.</p>
+<p>Edid for audio download by me <a href="https://github.com/korzhyk">korzhyk</a>.</p>
 
 <p>Extremely small tool to export audios from <a href="https://vk.com">vk.com</a>.</p>
 
-<p>Home page <a href="http://korzhyk.github.com/VKMusic">VKMusic</a></p>
+<h2>
+<a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites</h2>
 
-<h2>Installation</h2>
+<p>Before you can start using VKMusic you have to install some python libraries if you don't have it.</p>
 
-<h3>VK-Api</h3>
+<h3>
+<a id="requests" class="anchor" href="#requests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requests</h3>
 
-<p>Install vk-api from this repo <a href="https://github.com/python273/vk_api">vk_api</a>. And then:</p>
+<p><a href="https://github.com/kennethreitz/requests">https://github.com/kennethreitz/requests</a></p>
 
-<pre><code>$ easy_install VKMusic</code></pre>
-<p>or</p>
-<pre><code>$ pip install VKMusic</code></pre>
+<pre><code>$ pip install requests
+</code></pre>
 
-<h2>Usage</h2>
+<p>or, with <a href="http://pypi.python.org/pypi/setuptools">easy_install</a>:</p>
+
+<pre><code>$ easy_install requests
+</code></pre>
+
+<h3>
+<a id="vk_api" class="anchor" href="#vk_api" aria-hidden="true"><span class="octicon octicon-link"></span></a>VK_API</h3>
+
+<p><a href="https://github.com/python273/vk_api">https://github.com/python273/vk_api</a></p>
+
+<pre><code>$ pip install vk_api
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <p>Synopsis:</p>
 
-<pre><code>$ vkmusic [-h] [-v] [-o OUTPUT] [-p PASSWORD] username
+<pre><code>$ vkmusic.py [-h] [-v] [-o OUTPUT] [-p PASSWORD] username
 </code></pre>
 
 <p>See also <code>vkmusic --help</code>.</p>
 
-<h3>Examples</h3>
+<h3>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h3>
 
-<pre><code>$ vkmusic -p RawPa$$word username
+<pre><code>$ vkmusic.py -p RawPa$$word username
 </code></pre>
 
 <p>all audios will be exported to <code>./Music</code>.</p>
 
-<pre><code>$ vkmusic -o ~/Music username
+<pre><code>$ vkmusic.py -o ~/Music username
 </code></pre>
 
 <p>audios will be exported to <code>~/Music</code>.</p>
 
-<pre><code>$ vkmusic -s username
+<pre><code>$ vkmusic.py -s username
 </code></pre>
 
 <p>audios will be exported to artist name folders ex. <code>Adele - Let The Sky Fall.mp3</code> will be saved to <code>./Music/Adele/Let The Sky Fall.mp3</code></p>
 
-<h3>Screenshot</h3>
+<h3>
+<a id="screenshot" class="anchor" href="#screenshot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshot</h3>
 
-<p><a href="http://korzhyk.github.com/VKMusic/images/terminal.png"><img src="https://github.com/korzhyk/VKMusic/blob/gh-pages/images/terminal.png" alt="VKMusic" style="max-width:100%;"></a></p>
+<p><img src="http://korzhyk.github.com/VKMusic/images/terminal.png" alt="VKMusic"></p>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/korzhyk">korzhyk</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/korzhyk">korzhyk</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
